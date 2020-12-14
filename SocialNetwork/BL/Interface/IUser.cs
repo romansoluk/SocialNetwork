@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BL.Concrete;
+using Cassandra;
 using DTO;
+using DTOCassandra;
 
 namespace BL.Interface
 {
@@ -28,7 +30,11 @@ namespace BL.Interface
         void AddComment(CommentDTO comment, string PostID);
         void DeleteComment(CommentDTO comment, string PostID);
         List<CommentDTO> ShowComments(string PostID);
-      
+        string RelationshipStatus(UserDTO user1, UserDTO user2);
+        void SynchronizeStream(PostDTOCassandra post, ISession session);
+        void SyncronizeNewPost(PostDTOCassandra post, string username);
+        void SyncronizeExistingPost(PostDTOCassandra post, string username);
+        void SyncronizeComment(PostDTOCassandra post, CommentDTOCassandra comment, string username);
 
     }
 }

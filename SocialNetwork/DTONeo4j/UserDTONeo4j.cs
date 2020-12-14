@@ -8,7 +8,16 @@ using System.Threading.Tasks;
 namespace DTONeo4j
 {
     public class UserDTONeo4j
-    {
+     {
+
+        public UserDTONeo4j() { }
+        public UserDTONeo4j(string username, List<string> followers, List<string> following)
+        {
+            Username = username;
+            Followers = followers;
+            Following = following;
+        }
+
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
         [JsonProperty(PropertyName = "Followers")]

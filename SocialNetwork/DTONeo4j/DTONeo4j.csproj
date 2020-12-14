@@ -133,9 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="RelationshipLength.cs" />
-    <Compile Include="Relationships\Followed.cs" />
-    <Compile Include="Relationships\Follower.cs" />
-    <Compile Include="Relationships\Friends.cs" />
+    <Compile Include="Follower.cs" />
     <Compile Include="UserDTONeo4j.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
