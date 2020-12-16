@@ -68,7 +68,7 @@ namespace DALC.Concrete
 
             //Get data from comments
             List<CommentC> comments = new List<CommentC>();
-            var getComments = session.Prepare("Select * from comments from Post where PostID = ? ");
+            var getComments = session.Prepare("Select comments from Post where PostID = ? ");
             var listComments = session.Execute(getComments.Bind(post.PostID));
 
             foreach (var commentRow in listComments)
